@@ -62,4 +62,11 @@ alter table employee_payroll add taxable_pay double not null after deductions;
 alter table employee_payroll add tax double not null after taxable_pay;
 alter table employee_payroll add net_pay double not null after tax;
 
+#UC10
 
+insert into Employee_payroll 
+       (id,name,phone_number,address,department,gender,basic_pay,deductions,taxable_pay,tax,net_pay,startDate)
+values(9,'Terissa','9888888888','hyd','Sales','F',4800000,100000,40000,5400,4000000,'2021-08-08');
+insert into Employee_payroll 
+       (id,name,phone_number,address,department,gender,basic_pay,deductions,taxable_pay,tax,net_pay,startDate)
+values(10,'Terissa','9888888888','pune','Marketing','F',4800000,100000,40000,5400,4000000,'2021-03-08');
