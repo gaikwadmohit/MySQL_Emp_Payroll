@@ -24,3 +24,8 @@ insert into employee_payroll(name,salary,startdate)values('Ragul',60000,'2021-11
 
 #UC4 
 select * from employee_payroll;
+
+#UC5
+select * from employee_payroll where name="Rajendra";
+select * from employee_payroll where salary=70000;
+select * from employee_payroll where startDate between '2021-1-17' And date(now());
