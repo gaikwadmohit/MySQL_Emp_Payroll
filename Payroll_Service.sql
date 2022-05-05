@@ -54,5 +54,12 @@ alter table employee_payroll alter address set default 'TBD';
 insert into employee_payroll (id,name,phone_number,address,department,salary,startDate,gender) 
 values(8,'sonu','55555656233','nagpur','CSE', 75000, '2014-08-12','M');
 
+#UC9
+
+alter table employee_payroll rename column salary to basic_pay;
+alter table employee_payroll add deductions double not null after basic_pay;
+alter table employee_payroll add taxable_pay double not null after deductions;
+alter table employee_payroll add tax double not null after taxable_pay;
+alter table employee_payroll add net_pay double not null after tax;
 
 
