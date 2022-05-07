@@ -101,3 +101,53 @@ create table employee_department(
   primary key(employee_id,department_id)
 );
 desc employee_department;
+
+#UC12
+desc employee_department;
+select * from employee;
+select * from payroll;
+select * from department;
+select * from employee_department;
+show tables;
+
+create table employee;
+create table payroll;
+create table employee_department;
+
+
+insert into employee(name, gender, phone_number, address,startDate)
+values ('moni', 'F','9843256578','TS','2021-01-10');
+insert into employee(name, gender, phone_number, address,startDate)
+values ('tony', 'F','7656565645','Mumbai','2021-10-01');
+insert into employee(name, gender, phone_number, address,startDate)
+values ('loni', 'M','8675675656','AP','2021-01-04');
+insert into employee(name, gender, phone_number, address,startDate)
+values ('goni', 'M','9745643534','TN','2021-04-10');
+
+insert into payroll(basic_pay, deductions, income_tax, taxable_pay, tax, net_pay,emp_ID)
+values (1200000,1000,500,5000,600,350000,6);
+insert into payroll(basic_pay, deductions, income_tax, taxable_pay, tax, net_pay,emp_ID)
+values (650000,2000,500,5000,600,450000,3);
+insert into payroll(basic_pay, deductions, income_tax, taxable_pay, tax, net_pay,emp_ID)
+values (550000,3000,500,5000,600,550000,4);
+insert into payroll(basic_pay, deductions, income_tax, taxable_pay, tax, net_pay,emp_ID)
+values (110000,4000,500,5000,600,650000,2);
+
+insert into department(dept_name)
+values('Sales'),('Marketing');
+insert into department(dept_name)
+values('HR');
+select sum(basic_pay) from payroll;
+select gender, sum(basic_pay) from payroll join employee group by gender;
+select gender, avg(basic_pay) from payroll join employee group by gender ;
+select gender, max(basic_pay) from payroll join employee group by gender ;
+select gender, min(basic_pay) from payroll join employee group by gender ;
+select gender, count(*) from employee group by gender;
+
+insert into employee(name, gender, phone_number, address,startDate)
+values ('Terissa', 'f','9895689865','LD','2022-02-40');
+
+insert into payroll(basic_pay, deductions, income_tax, taxable_pay, tax, net_pay,emp_ID)
+values (440000,2000,300,4000,800,460000,5);
+
+insert into employee_department(employee_id,department_id)values(1,1);
